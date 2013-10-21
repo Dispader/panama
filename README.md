@@ -19,27 +19,27 @@ Usage:
 
 Single Run Mode
 ---------------
-	In single run mode (with the -d option NOT set), panama simply looks
+In single run mode (with the -d option NOT set), panama simply looks
 in <directory> and chooses a random file from this directory. It then writes
 this file to the output file (default is the .plan in your home directory). 
 
-	Thus one can set up a directory of .plan candidates which will be
+Thus one can set up a directory of .plan candidates which will be
 chosen from whenever panama is executed.
 
-	A main advantage of panama over other .plan randomizers is that the
+A main advantage of panama over other .plan randomizers is that the
 candidate files need be in no special format and need have no special names-
 new files can simply be 'thrown' into the directory and files no longer
 desired can simply be removed with no effect on panama's run in either
 mode.
 
-	If the -c option is set, the .plan file written to will take on the
+If the -c option is set, the .plan file written to will take on the
 permissions next specified (see the chmod command).
 
-	If -f or -h is set, the file will be added to the footer or header of
+If -f or -h is set, the file will be added to the footer or header of
 the file, respectively. -o allows you to specify to write the output to a file
 other than .plan (eg: a .signature or .project file).
  
-	In single run mode, panama can be called in resource or script files
+In single run mode, panama can be called in resource or script files
 (eg: .login, .mailrc, etc.) to change the outpput file; or it can be set up
 as a cron job (see the man pages on crontab for your system's usage) to change
 the plan at specified times (e.g.: once an hour).
@@ -47,14 +47,14 @@ the plan at specified times (e.g.: once an hour).
 
 Daemon Mode
 -----------
-	A more interesting application of panama is launching it as a daemon
+A more interesting application of panama is launching it as a daemon
 that will change the output file any time something opens it to read it.
 Your .plan and .project will change when you are fingered, and every time
 you are fingered panama will change the files. Your .signatures will change
 with every letter. This mode also has the advantage over running as a cron
 job of not changing the output file when it is not necessary.
 
-	To launch panama into daemon mode, specify the -d option. Take note of
+To launch panama into daemon mode, specify the -d option. Take note of
 the process ID number, as you will need this to kill panama at a later date.
 Remember also to remove the output file after you kill panama running in
 daemon mode ("rm .plan"), as your plan has actually been converted to a
@@ -63,21 +63,21 @@ their console will hang. Also note that panama must be killed with the -9
 option, as it ignores hangup and interrupt signals to avoid dieing on
 logout and nasty consequences of interrupts being sent during a read.
 
-	The -f and -h files you specify when you select daemon mode will be
+The -f and -h files you specify when you select daemon mode will be
 optional.
 
-	If the files are not there, they will simply not be added to your .plan.
+If the files are not there, they will simply not be added to your .plan.
 If they are, they will. Changing them or deleting them will not phaze panama in
 daemon mode. Should you want to change the names of the files that will be
 used as footer or header files, however; you will need to kill and restart
 panama.
 
-	The -l option allows you to keep tabs upon just who's been fingering
+The -l option allows you to keep tabs upon just who's been fingering
 you. The file will appear when you get fingered and will continue to grow
 and log each time you are fingered. You may delete the file at any time and
 this will "clear" the log for you so it doesn't become cluttered.
 
-	File permissions in daemon mode will only be attributed to the output
+File permissions in daemon mode will only be attributed to the output
 when panama is launched. Hence, permissions on the output file can be changed
 without needing to kill or restart panama.
 
