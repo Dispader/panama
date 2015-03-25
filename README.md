@@ -1,5 +1,5 @@
-Panama 4.2 release notice
--------------------------
+# Panama 4.2 release notice
+
 A random .plan? How banal. Panama.
 
  Well, kids, here it is: the spunky panama version 4.2. It does a number of
@@ -11,14 +11,13 @@ processes that refuse to die. Finger logging option is also available and
 a semantic error has been corrected. My apologies for the half-dazed
 release of 4.1.
 
-Usage:
-------
+## Usage:
 
  Panama can be made to run in one of two modes: 'single run' or
 'daemon mode'.
 
-Single Run Mode
----------------
+### Single Run Mode
+
 In single run mode (with the -d option NOT set), panama simply looks
 in <directory> and chooses a random file from this directory. It then writes
 this file to the output file (default is the .plan in your home directory). 
@@ -45,8 +44,8 @@ as a cron job (see the man pages on crontab for your system's usage) to change
 the plan at specified times (e.g.: once an hour).
 
 
-Daemon Mode
------------
+### Daemon Mode
+
 A more interesting application of panama is launching it as a daemon
 that will change the output file any time something opens it to read it.
 Your .plan and .project will change when you are fingered, and every time
@@ -81,8 +80,8 @@ File permissions in daemon mode will only be attributed to the output
 when panama is launched. Hence, permissions on the output file can be changed
 without needing to kill or restart panama.
 
-Acknowledgements
-----------------
+## Acknowledgements
+
 Special thanks go out to the following:
 
 	Joe Zbiciak for an introduction to named pipes.
@@ -120,3 +119,9 @@ for a bit.
 						-Jake
 						(I was The Deathmon)
 						deathmon@sunrayce.solar.umn.edu
+
+## coda
+
+This horribly coded project is preserved for historical purposes only.
+
+[![Analytics](https://ga-beacon.appspot.com/UA-61184208-1/chromeskel_a/readme)](https://github.com/igrigorik/ga-beacon)
